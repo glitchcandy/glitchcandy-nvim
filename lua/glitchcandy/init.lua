@@ -21,10 +21,10 @@ local DEFAULT_CONFIG = {
 }
 
 local TRANSPARENTS = {
-   "Normal",
-   "SignColumn",
-   "NvimTreeNormal",
-   "NvimTreeVertSplit",
+--   "Normal",
+--   "SignColumn",
+--   "NvimTreeNormal",
+--   "NvimTreeVertSplit",
 }
 
 local function apply_term_colors(colors)
@@ -48,7 +48,7 @@ local function apply_term_colors(colors)
    g.terminal_color_foreground = colors.fg
 end
 
----apply dracula colorscheme
+---apply colorscheme
 ---@param configs DefaultConfig
 local function apply(configs)
    local colors = configs.colors
