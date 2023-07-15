@@ -20,13 +20,6 @@ local DEFAULT_CONFIG = {
    overrides = {},
 }
 
-local TRANSPARENTS = {
---   "Normal",
---   "SignColumn",
---   "NvimTreeNormal",
---   "NvimTreeVertSplit",
-}
-
 local function apply_term_colors(colors)
    g.terminal_color_0 = colors.black
    g.terminal_color_1 = colors.red
@@ -55,13 +48,6 @@ local function apply(configs)
    apply_term_colors(colors)
    local groups = require("glitchcandy.groups").setup(configs)
 
-   -- apply transparents
-   if configs.transparent_bg then
-      for _, group in ipairs(TRANSPARENTS) do
-         groups[group].bg = nil
-      end
-   end
-
    for group, setting in pairs(configs.overrides) do
       groups[group] = setting
    end
@@ -74,7 +60,7 @@ end
 
 local local_configs = DEFAULT_CONFIG
 
----setup dracula colorscheme
+---setup colorscheme
 ---@param configs DefaultConfig?
 local function setup(configs)
    if type(configs) == "table" then
@@ -82,7 +68,7 @@ local function setup(configs)
    end
 end
 
----load dracula colorscheme
+---load colorscheme
 local function load()
    if vim.version().minor < 7 then
       vim.notify_once("glitchcandy: you must use neovim 0.7 or higher")
