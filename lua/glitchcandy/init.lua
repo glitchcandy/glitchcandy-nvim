@@ -12,8 +12,8 @@ local tbl_deep_extend = vim.tbl_deep_extend
 ---@field colors Palette
 ---@field overrides table<string, Highlight>
 local DEFAULT_CONFIG = {
-   italic_comment = false,
-   transparent_bg = false,
+   italic_comment = true,
+   transparent_bg = true,
    show_end_of_buffer = false,
    lualine_bg_color = nil,
    colors = require("glitchcandy.palette"),
