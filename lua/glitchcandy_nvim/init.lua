@@ -71,7 +71,7 @@ end
 ---load colorscheme
 local function load()
    if vim.version().minor < 7 then
-      vim.notify_once("glitchcandy: you must use neovim 0.7 or higher")
+      vim.notify_once("glitchcandy_nvim: you must use neovim 0.7 or higher")
       return
    end
 
