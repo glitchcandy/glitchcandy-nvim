@@ -1,1 +1,1 @@
-require("glitchcandy").load()
+require("glitchcandy_nvim").load()
