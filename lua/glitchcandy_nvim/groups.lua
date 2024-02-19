@@ -126,11 +126,11 @@ local function setup()
 		-- ['@punctuation.delimiter'] = { fg = colors.fg, },
 		-- ['@punctuation.bracket'] = { fg = colors.fg, },
 		-- ['@punctuation.special'] = { fg = colors.cyan, },
-		--
+
 		-- ['@constant'] = { fg = colors.purple, },
 		-- ['@constant.builtin'] = { fg = colors.purple, },
 		-- ['@symbol'] = { fg = colors.purple, },
-		--
+
 		-- ['@constant.macro'] = { fg = colors.cyan, },
 		-- ['@string.regex'] = { fg = colors.red, },
 		-- ['@string'] = { fg = colors.yellow, },
@@ -142,7 +142,7 @@ local function setup()
 		-- ['@annotation'] = { fg = colors.yellow, },
 		-- ['@attribute'] = { fg = colors.cyan, },
 		-- ['@namespace'] = { fg = colors.orange, },
-		--
+
 		-- ['@function.builtin'] = { fg = colors.cyan, },
 		-- ['@function'] = { fg = colors.green, },
 		-- ['@function.macro'] = { fg = colors.green, },
@@ -152,11 +152,11 @@ local function setup()
 		-- ['@field'] = { fg = colors.orange, },
 		-- ['@property'] = { fg = colors.purple, },
 		-- ['@constructor'] = { fg = colors.cyan, },
-		--
+
 		-- ['@conditional'] = { fg = colors.pink, },
 		-- ['@repeat'] = { fg = colors.pink, },
 		-- ['@label'] = { fg = colors.cyan, },
-		--
+
 		-- ['@keyword'] = { fg = colors.pink, },
 		-- ['@keyword.function'] = { fg = colors.cyan, },
 		-- ['@keyword.operator'] = { fg = colors.pink, },
@@ -167,10 +167,10 @@ local function setup()
 		-- ['@type.qualifier'] = { fg = colors.pink, },
 		-- ['@structure'] = { fg = colors.purple, },
 		-- ['@include'] = { fg = colors.pink, },
-		--
+
 		-- ['@variable'] = { fg = colors.fg, },
 		-- ['@variable.builtin'] = { fg = colors.purple, },
-		--
+
 		-- ['@text'] = { fg = colors.orange, },
 		-- ['@text.strong'] = { fg = colors.orange, bold = true, }, -- bold
 		-- ['@text.emphasis'] = { fg = colors.yellow, italic = true, }, -- italic
@@ -179,12 +179,12 @@ local function setup()
 		-- ['@text.literal'] = { fg = colors.yellow, }, -- inline code
 		-- ['@text.uri'] = { fg = colors.yellow, italic = true, }, -- urls
 		-- ['@text.reference'] = { fg = colors.orange, bold = true, },
-		--
+
 		-- ['@tag'] = { fg = colors.cyan, },
 		-- ['@tag.attribute'] = { fg = colors.green, },
 		-- ['@tag.delimiter'] = { fg = colors.cyan, },
-		--
-		-- -- Semantic
+
+		-- Semantic
 		-- ['@class'] = { fg = colors.cyan },
 		-- ['@struct'] = { fg = colors.cyan },
 		-- ['@enum'] = { fg = colors.cyan },
@@ -195,8 +195,8 @@ local function setup()
 		-- ['@regexp'] = { fg = colors.yellow },
 		-- ['@typeParameter'] = { fg = colors.cyan },
 		-- ['@decorator'] = { fg = colors.cyan },
-		--
-		-- -- HTML
+
+		-- HTML
 		-- htmlArg = { fg = colors.green, },
 		-- htmlBold = { fg = colors.yellow, bold = true, },
 		-- htmlEndTag = { fg = colors.cyan, },
@@ -214,8 +214,8 @@ local function setup()
 		-- htmlTagN = { fg = colors.cyan, },
 		-- htmlTagName = { fg = colors.cyan, },
 		-- htmlTitle = { fg = colors.white, },
-		--
-		-- -- Markdown
+
+		-- Markdown
 		-- markdownBlockquote = { fg = colors.yellow, italic = true, },
 		-- markdownBold = { fg = colors.orange, bold = true, },
 		-- markdownCode = { fg = colors.green, },
@@ -238,19 +238,19 @@ local function setup()
 		-- markdownListMarker = { fg = colors.cyan, },
 		-- markdownOrderedListMarker = { fg = colors.red, },
 		-- markdownRule = { fg = colors.comment, },
-		--
-		-- --  Diff
+
+		-- Diff
 		-- diffAdded = { fg = colors.green, },
 		-- diffRemoved = { fg = colors.red, },
 		-- diffFileId = { fg = colors.yellow, bold = true, reverse = true, },
 		-- diffFile = { fg = colors.nontext, },
 		-- diffNewFile = { fg = colors.green, },
 		-- diffOldFile = { fg = colors.red, },
-		--
+
 		-- debugPc = { bg = colors.cyan, },
 		-- debugBreakpoint = { fg = colors.red, reverse = true, },
-		--
-		-- -- Git Signs
+
+		-- Git Signs
 		-- GitSignsAdd = { fg = colors.bright_green, },
 		-- GitSignsChange = { fg = colors.cyan, },
 		-- GitSignsDelete = { fg = colors.bright_red, },
@@ -258,13 +258,13 @@ local function setup()
 		-- GitSignsChangeLn = { fg = colors.black, bg = colors.cyan, },
 		-- GitSignsDeleteLn = { fg = colors.black, bg = colors.bright_red, },
 		-- GitSignsCurrentLineBlame = { fg = colors.white, },
-		--
-		-- -- Bufferline
+
+		-- Bufferline
 		-- BufferLineIndicatorSelected = { fg = colors.purple, },
 		-- BufferLineFill = { bg = colors.black, },
 		-- BufferLineBufferSelected = { bg = colors.bg, },
-		--
-		-- -- LSP
+
+		-- LSP
 		-- DiagnosticError = { fg = colors.red, },
 		-- DiagnosticWarn = { fg = colors.yellow, },
 		-- DiagnosticInfo = { fg = colors.cyan, },
@@ -285,7 +285,7 @@ local function setup()
 		-- DiagnosticVirtualTextWarn = { fg = colors.yellow, },
 		-- DiagnosticVirtualTextInfo = { fg = colors.cyan, },
 		-- DiagnosticVirtualTextHint = { fg = colors.cyan, },
-		--
+
 		-- LspDiagnosticsDefaultError = { fg = colors.red, },
 		-- LspDiagnosticsDefaultWarning = { fg = colors.yellow, },
 		-- LspDiagnosticsDefaultInformation = { fg = colors.cyan, },
@@ -298,8 +298,8 @@ local function setup()
 		-- LspReferenceRead = { fg = colors.orange, },
 		-- LspReferenceWrite = { fg = colors.orange, },
 		-- LspCodeLens = { fg = colors.cyan, },
-		--
-		-- --LSP Saga
+
+		--LSP Saga
 		-- LspFloatWinNormal = { fg = colors.fg, },
 		-- LspFloatWinBorder = { fg = colors.comment, },
 		-- LspSagaHoverBorder = { fg = colors.comment, },
@@ -314,11 +314,11 @@ local function setup()
 		-- LspSagaShTruncateLine = { fg = colors.comment, },
 		-- LspSagaDocTruncateLine = { fg = colors.comment, },
 		-- LspSagaLspFinderBorder = { fg = colors.comment, },
-		--
-		-- -- IndentBlankLine
-		-- IndentBlanklineContextChar = { fg = colors.bright_red, nocombine = true, },
-		--
-		-- -- Cmp
+
+		-- IndentBlankLine
+		IndentBlanklineContextChar = { fg = colors.red_alt, nocombine = true, },
+
+		-- Cmp
 		-- CmpItemKind = { link = "Pmenu" },
 		-- CmpItemAbbr = { link = "Pmenu" },
 		-- CmpItemKindMethod = { link = "@method" },
@@ -346,15 +346,15 @@ local function setup()
 		-- CmpItemKindConstant = { link = "@constant" },
 		-- CmpItemKindStruct = { link = "@structure" },
 		-- CmpItemKindTypeParameter = { link = "@parameter" },
-		--
-		-- -- TS rainbow colors
-		-- rainbowcol1 = { fg = colors.red, },
-		-- rainbowcol2 = { fg = colors.green, },
-		-- rainbowcol3 = { fg = colors.yellow, },
-		-- rainbowcol4 = { fg = colors.purple, },
-		-- rainbowcol5 = { fg = colors.pink, },
-		-- rainbowcol6 = { fg = colors.cyan, },
-		-- rainbowcol7 = { fg = colors.white, },
+
+		-- TS rainbow colors
+		rainbowcol1 = { fg = colors.red, },
+		rainbowcol2 = { fg = colors.green, },
+		rainbowcol3 = { fg = colors.yellow, },
+		rainbowcol4 = { fg = colors.purple, },
+		rainbowcol5 = { fg = colors.pink, },
+		rainbowcol6 = { fg = colors.cyan, },
+		rainbowcol7 = { fg = colors.fg, },
 	}
 end
 
