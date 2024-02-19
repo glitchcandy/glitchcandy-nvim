@@ -209,7 +209,7 @@ local function setup()
 		['@markup.strikethrough'] = { strikethrough = true, },
 		['@markup.underline'] = { underline = true, },
 
-		['@markup.heading'] = { fg = colors.purple, bold = true, undeline = true, },
+		['@markup.heading'] = { fg = colors.purple, bold = true, underline = true, },
 
 		['@markup.quote'] = { fg = colors.yellow, bg = colors.bg_alt, italic = true, },
 		['@markup.math'] = { fg = colors.yellow_alt, bg = colors.bg_alt, },
