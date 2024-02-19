@@ -256,8 +256,9 @@ local function setup()
 		diffNewFile = { fg = colors.green, bg = colors.bg_alt, },
 		diffOldFile = { fg = colors.red, bg = colors.bg_alt, },
 
-		-- debugPc = { bg = colors.cyan, },
-		-- debugBreakpoint = { fg = colors.red, reverse = true, },
+		-- Debug
+		debugPc = { bg = colors.cyan, },
+		debugBreakpoint = { fg = colors.red, reverse = true, },
 
 		-- Git Signs
 		GitSignsAdd = { fg = colors.green_alt, },
