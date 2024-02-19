@@ -27,7 +27,7 @@
 ---@return table<string, Highlight>
 ---@nodiscard
 local function setup()
-	local colors = require("glitchcandy_nvim.palette")
+	local colors = require("glitchcandy.palette")
 
 	return {
 		Normal = { fg = colors.fg, bg = colors.bg, },
