@@ -121,6 +121,15 @@ local function setup()
 
 		EndOfBuffer = { fg = colors.bg },
 
+		-- Mode Highlights
+		NormalMode = { fg = colors.purple },
+		InsertMode = { fg = colors.green },
+		VisualMode = { fg = colors.pink },
+		CommandMode = { fg = colors.cyan },
+		ReplaceMode = { fg = colors.yellow },
+		SelectMode = { fg = colors.pink },
+		TerminalMode = { fg = colors.green_alt },
+
 		-- TreeSitter
 		-- ['@error'] = { fg = colors.bright_red, },
 		-- ['@punctuation.delimiter'] = { fg = colors.fg, },
