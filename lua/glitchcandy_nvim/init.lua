@@ -61,5 +61,5 @@ end
 
 return {
    load = load,
-   colors = require("glitchcandy_nvim.palette").colors(),
+   colors = require("glitchcandy_nvim.palette").colors,
 }
