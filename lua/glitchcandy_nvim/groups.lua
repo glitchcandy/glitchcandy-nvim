@@ -240,12 +240,12 @@ local function setup()
 		markdownRule = { fg = colors.fg_alt, },
 
 		-- Diff
-		-- diffAdded = { fg = colors.green, },
-		-- diffRemoved = { fg = colors.red, },
-		-- diffFileId = { fg = colors.yellow, bold = true, reverse = true, },
-		-- diffFile = { fg = colors.nontext, },
-		-- diffNewFile = { fg = colors.green, },
-		-- diffOldFile = { fg = colors.red, },
+		diffAdded = { fg = colors.green, bg = colors.bg_alt, },
+		diffRemoved = { fg = colors.red, bg = colors.bg_alt, },
+		diffFileId = { fg = colors.yellow, bg = colors.bg_alt, bold = true, reverse = true, },
+		diffFile = { fg = colors.fg_alt, bg = colors.bg_alt, },
+		diffNewFile = { fg = colors.green, bg = colors.bg_alt, },
+		diffOldFile = { fg = colors.red, bg = colors.bg_alt, },
 
 		-- debugPc = { bg = colors.cyan, },
 		-- debugBreakpoint = { fg = colors.red, reverse = true, },
