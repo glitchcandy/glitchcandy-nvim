@@ -67,7 +67,7 @@ local function setup()
 		Underlined = { underline = true, },
 
 		Cursor = { reverse = true, },
-		CursorLineNr = { fg = colors.fg, bold = true, },
+		CursorLineNr = { fg = colors.fg, bg = colors.bg_alt, bold = true, },
 
 		SignColumn = { bg = colors.bg_alt, },
 
