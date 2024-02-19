@@ -1,4 +1,4 @@
-local glitchcandy = require("glitchcandy_nvim")
+local glitchcandy = require("glitchcandy")
 local configs = glitchcandy.configs()
 local colors = glitchcandy.colors()
 

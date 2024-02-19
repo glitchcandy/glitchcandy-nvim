@@ -16,7 +16,7 @@ local DEFAULT_CONFIG = {
    transparent_bg = true,
    show_end_of_buffer = false,
    lualine_bg_color = nil,
-   colors = require("glitchcandy_nvim.palette"),
+   colors = require("glitchcandy.palette"),
    overrides = {},
 }
 
@@ -46,7 +46,7 @@ end
 local function apply(configs)
    local colors = configs.colors
    apply_term_colors(colors)
-   local groups = require("glitchcandy_nvim.groups").setup(configs)
+   local groups = require("glitchcandy.groups").setup(configs)
 
    for group, setting in pairs(configs.overrides) do
       groups[group] = setting
@@ -71,7 +71,7 @@ end
 ---load colorscheme
 local function load()
    if vim.version().minor < 7 then
-      vim.notify_once("glitchcandy_nvim: you must use neovim 0.7 or higher")
+      vim.notify_once("glitchcandy: you must use neovim 0.7 or higher")
       return
    end
 
