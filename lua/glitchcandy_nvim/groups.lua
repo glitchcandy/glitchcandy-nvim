@@ -121,15 +121,6 @@ local function setup()
 
 		EndOfBuffer = { fg = colors.bg },
 
-		-- Mode Highlights
-		NormalMode = { fg = colors.purple },
-		InsertMode = { fg = colors.green },
-		VisualMode = { fg = colors.pink },
-		CommandMode = { fg = colors.cyan },
-		ReplaceMode = { fg = colors.yellow },
-		SelectMode = { fg = colors.pink },
-		TerminalMode = { fg = colors.green_alt },
-
 		-- TreeSitter
 		['@variable'] = { fg = colors.purple, },
 		['@variable.builtin'] = { fg = colors.purple_alt, },
@@ -233,6 +224,15 @@ local function setup()
 		['@tag'] = { fg = colors.blue, },
 		['@tag.attribute'] = { fg = colors.green, },
 		['@tag.delimiter'] = { fg = colors.blue_alt, },
+
+		-- Mode Highlights
+		NormalMode = { fg = colors.purple },
+		InsertMode = { fg = colors.green },
+		VisualMode = { fg = colors.pink },
+		CommandMode = { fg = colors.cyan },
+		ReplaceMode = { fg = colors.yellow },
+		SelectMode = { fg = colors.pink },
+		TerminalMode = { fg = colors.green_alt },
 
 		-- HTML
 		htmlArg = { fg = colors.green, },
