@@ -260,18 +260,13 @@ local function setup()
 		-- debugBreakpoint = { fg = colors.red, reverse = true, },
 
 		-- Git Signs
-		-- GitSignsAdd = { fg = colors.bright_green, },
-		-- GitSignsChange = { fg = colors.cyan, },
-		-- GitSignsDelete = { fg = colors.bright_red, },
-		-- GitSignsAddLn = { fg = colors.black, bg = colors.bright_green, },
-		-- GitSignsChangeLn = { fg = colors.black, bg = colors.cyan, },
-		-- GitSignsDeleteLn = { fg = colors.black, bg = colors.bright_red, },
-		-- GitSignsCurrentLineBlame = { fg = colors.white, },
-
-		-- Bufferline
-		-- BufferLineIndicatorSelected = { fg = colors.purple, },
-		-- BufferLineFill = { bg = colors.black, },
-		-- BufferLineBufferSelected = { bg = colors.bg, },
+		GitSignsAdd = { fg = colors.green_alt, },
+		GitSignsChange = { fg = colors.cyan, },
+		GitSignsDelete = { fg = colors.red_alt, },
+		GitSignsAddLn = { fg = colors.bg, bg = colors.green_alt, },
+		GitSignsChangeLn = { fg = colors.bg, bg = colors.cyan, },
+		GitSignsDeleteLn = { fg = colors.bg, bg = colors.red_alt, },
+		GitSignsCurrentLineBlame = { fg = colors.fg, },
 
 		-- LSP
 		-- DiagnosticError = { fg = colors.red, },
