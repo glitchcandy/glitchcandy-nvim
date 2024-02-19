@@ -86,7 +86,7 @@ local function load()
 
    o.background = "dark"
    o.termguicolors = true
-   g.colors_name = "glitchcandy_nvim"
+   g.colors_name = "glitchcandy"
 
    apply(local_configs)
 end
