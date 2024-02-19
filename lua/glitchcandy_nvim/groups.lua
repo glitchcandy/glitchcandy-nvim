@@ -114,8 +114,8 @@ local function setup()
 		TabLineSel = { fg = colors.fg, bg = colors.bg, },
 		TabLineFill = { bg = colors.bg_alt, },
 		Terminal = { fg = colors.fg, bg = colors.bg, },
-		Visual = { fg = colors.fg_alt, bg = colors.orange, },
-		VisualNOS = { fg = colors.orange, bg = colors.fg_alt, },
+		Visual = { fg = colors.fg, bg = colors.orange, },
+		VisualNOS = { fg = colors.orange, bg = colors.fg, },
 		WarningMsg = { fg = colors.yellow, },
 		WildMenu = { fg = colors.bg, bg = colors.fg, },
 
