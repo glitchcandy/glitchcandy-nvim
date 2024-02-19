@@ -1,8 +1,6 @@
-local glitchcandy = require("glitchcandy_nvim")
-local configs = glitchcandy.configs()
-local colors = glitchcandy.colors()
+local colors = require("glitchcandy_nvim").colors()
 
-local bg = configs.lualine_bg_color or colors.black
+local bg = colors.bg_alt
 
 local normal = {
    a = { fg = colors.black, bg = colors.purple, gui = 'bold' },

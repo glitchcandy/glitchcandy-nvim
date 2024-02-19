@@ -2,69 +2,37 @@ local o = vim.o
 local g = vim.g
 local cmd = vim.cmd
 local nvim_set_hl = vim.api.nvim_set_hl
-local tbl_deep_extend = vim.tbl_deep_extend
-
----@class DefaultConfig
----@field italic_comment boolean
----@field transparent_bg boolean
----@field show_end_of_buffer boolean
----@field lualine_bg_color string?
----@field colors Palette
----@field overrides table<string, Highlight>
-local DEFAULT_CONFIG = {
-   italic_comment = true,
-   transparent_bg = true,
-   show_end_of_buffer = false,
-   lualine_bg_color = nil,
-   colors = require("glitchcandy_nvim.palette"),
-   overrides = {},
-}
 
 local function apply_term_colors(colors)
-   g.terminal_color_0 = colors.black
+   g.terminal_color_0 = colors.bg
    g.terminal_color_1 = colors.red
    g.terminal_color_2 = colors.green
    g.terminal_color_3 = colors.yellow
    g.terminal_color_4 = colors.purple
    g.terminal_color_5 = colors.pink
    g.terminal_color_6 = colors.cyan
-   g.terminal_color_7 = colors.white
-   g.terminal_color_8 = colors.selection
-   g.terminal_color_9 = colors.bright_red
-   g.terminal_color_10 = colors.bright_green
-   g.terminal_color_11 = colors.bright_yellow
-   g.terminal_color_12 = colors.bright_blue
-   g.terminal_color_13 = colors.bright_magenta
-   g.terminal_color_14 = colors.bright_cyan
-   g.terminal_color_15 = colors.bright_white
+   g.terminal_color_7 = colors.fg
+   g.terminal_color_8 = colors.fg_alt
+   g.terminal_color_9 = colors.red_alt
+   g.terminal_color_10 = colors.green_alt
+   g.terminal_color_11 = colors.yellow_alt
+   g.terminal_color_12 = colors.blue_alt
+   g.terminal_color_13 = colors.purple_alt
+   g.terminal_color_14 = colors.cyan_alt
+   g.terminal_color_15 = colors.white_alt
    g.terminal_color_background = colors.bg
    g.terminal_color_foreground = colors.fg
 end
 
 ---apply colorscheme
----@param configs DefaultConfig
-local function apply(configs)
-   local colors = configs.colors
+local function apply()
+   local colors = require("glitchcandy_nvim.palette")
    apply_term_colors(colors)
-   local groups = require("glitchcandy_nvim.groups").setup(configs)
-
-   for group, setting in pairs(configs.overrides) do
-      groups[group] = setting
-   end
+   local groups = require("glitchcandy_nvim.groups").setup()
 
    -- set defined highlights
    for group, setting in pairs(groups) do
       nvim_set_hl(0, group, setting)
-   end
-end
-
-local local_configs = DEFAULT_CONFIG
-
----setup colorscheme
----@param configs DefaultConfig?
-local function setup(configs)
-   if type(configs) == "table" then
-      local_configs = tbl_deep_extend("force", DEFAULT_CONFIG, configs) --[[@as DefaultConfig]]
    end
 end
 
@@ -88,12 +56,10 @@ local function load()
    o.termguicolors = true
    g.colors_name = "glitchcandy_nvim"
 
-   apply(local_configs)
+   apply()
 end
 
 return {
    load = load,
-   setup = setup,
-   configs = function() return local_configs end,
-   colors = function() return local_configs.colors end,
+   colors = require("glitchcandy_nvim.palette").colors(),
 }
