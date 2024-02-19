@@ -93,7 +93,7 @@ local function setup()
 		FoldColumn = {},
 		Search = { fg = colors.bg_alt, bg = colors.orange, },
 		IncSearch = { fg = colors.fg, bg = colors.orange, },
-		LineNr = { fg = colors.fg_alt, },
+		LineNr = { fg = colors.fg_alt, bg = colors.bg_alt, },
 		MatchParen = { fg = colors.fg, underline = true, },
 		NonText = { fg = colors.bg_alt, },
 		Pmenu = { fg = colors.fg, bg = colors.bg_alt, },
