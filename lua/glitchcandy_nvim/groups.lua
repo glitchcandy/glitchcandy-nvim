@@ -131,79 +131,108 @@ local function setup()
 		TerminalMode = { fg = colors.green_alt },
 
 		-- TreeSitter
-		['@error'] = { fg = colors.red_alt, },
-		['@punctuation.delimiter'] = { fg = colors.fg, },
-		['@punctuation.bracket'] = { fg = colors.fg, },
-		['@punctuation.special'] = { fg = colors.cyan, },
+		['@variable'] = { fg = colors.purple, },
+		['@variable.builtin'] = { fg = colors.purple_alt, },
+		['@variable.parameter'] = { link = "@variable.builtin", },
+		['@variable.member'] = { link = "@variable", },
 
-		['@constant'] = { fg = colors.purple, },
-		['@constant.builtin'] = { fg = colors.purple, },
-		['@symbol'] = { fg = colors.purple, },
+		['@constant'] = { fg = colors.orange, },
+		['@constant.builtin'] = { fg = colors.orange_alt, },
+		['@constant.macro'] = { link = "@constant.builtin", },
 
-		['@constant.macro'] = { fg = colors.cyan, },
+		['@module'] = { fg = colors.yellow, },
+		['@module.builtin'] = { fg = colors.yellow_alt, },
+		['@label'] = { fg = colors.yellow_alt, },
+
+		['@string'] = { fg = colors.green, },
+		['@string.documentation'] = { fg = colors.green_alt, },
 		['@string.regex'] = { fg = colors.red, },
-		['@string'] = { fg = colors.yellow, },
-		['@string.escape'] = { fg = colors.cyan, },
-		['@character'] = { fg = colors.green, },
-		['@number'] = { fg = colors.purple, },
-		['@boolean'] = { fg = colors.purple, },
-		['@float'] = { fg = colors.green, },
-		['@annotation'] = { fg = colors.yellow, },
-		['@attribute'] = { fg = colors.cyan, },
-		['@namespace'] = { fg = colors.orange, },
+		['@string.escape'] = { fg = colors.green_alt, },
+		['@string.special'] = { link = "@string.escape", },
+		['@string.symbol'] = { link = "@string.escape", },
+		['@string.path'] = { fg = colors.cyan, },
+		['@string.url'] = { fg = colors.cyan, undercurl = true, },
 
-		['@function.builtin'] = { fg = colors.cyan, },
-		['@function'] = { fg = colors.green, },
-		['@function.macro'] = { fg = colors.green, },
-		['@parameter'] = { fg = colors.orange, },
-		['@parameter.reference'] = { fg = colors.orange, },
-		['@method'] = { fg = colors.green, },
-		['@field'] = { fg = colors.orange, },
-		['@property'] = { fg = colors.purple, },
-		['@constructor'] = { fg = colors.cyan, },
+		['@character'] = { fg = colors.green_alt, },
+		['@character.special'] = { link = "@character", bold = true, },
 
-		['@conditional'] = { fg = colors.pink, },
-		['@repeat'] = { fg = colors.pink, },
-		['@label'] = { fg = colors.cyan, },
+		['@boolean'] = { fg = colors.blue, },
+		['@number'] = { link = "@boolean" },
+		['@number.float'] = { fg = colors.blue_alt, },
 
-		['@keyword'] = { fg = colors.pink, },
-		['@keyword.function'] = { fg = colors.cyan, },
-		['@keyword.operator'] = { fg = colors.pink, },
-		['@operator'] = { fg = colors.pink, },
-		['@exception'] = { fg = colors.purple, },
-		['@type'] = { fg = colors.cyan_alt, },
-		['@type.builtin'] = { fg = colors.cyan, italic = true, },
-		['@type.qualifier'] = { fg = colors.pink, },
-		['@structure'] = { fg = colors.purple, },
-		['@include'] = { fg = colors.pink, },
+		['@type'] = { fg = colors.cyan, italic = true, },
+		['@type.builtin'] = { link = "@type", fg = colors.cyan_alt, },
+		['@type.definition'] = { fg = colors.pink_alt, },
+		['@type.qualifier'] = { link = "@type.definition", },
 
-		['@variable'] = { fg = colors.fg, },
-		['@variable.builtin'] = { fg = colors.purple, },
+		['@attribute'] = { fg = colors.yellow, },
+		['@property'] = { fg = colors.purple, italic = true, },
 
-		['@text'] = { fg = colors.orange, },
-		['@text.strong'] = { fg = colors.orange, bold = true, }, -- bold
-		['@text.emphasis'] = { fg = colors.yellow, italic = true, }, -- italic
-		['@text.underline'] = { fg = colors.orange, },
-		['@text.title'] = { fg = colors.pink, bold = true, }, -- title
-		['@text.literal'] = { fg = colors.yellow, }, -- inline code
-		['@text.uri'] = { fg = colors.yellow, italic = true, }, -- urls
-		['@text.reference'] = { fg = colors.orange, bold = true, },
+		['@function'] = { fg = colors.green, italic = true, },
+		['@function.builtin'] = { link = "@function", fg = colors.green_alt, },
+		['@function.call'] = { link = "@function" },
+		['@function.macro'] = { link = "@function", bold = true, },
+
+		['@function.method'] = { link = "@function" },
+		['@function.method.call'] = { link = "@function" },
+
+		['@constructor'] = { link = "@function.call", },
+		['@operator'] = { fg = colors.pink, italic = true, bold = true, },
+
+		['@keyword'] = { fg = colors.pink, bold = true, },
+		['@keyword.coroutine'] = { fg = colors.pink, italic = true, },
+		['@keyword.function'] = { link = "@keyword", },
+		['@keyword.operator'] = { link = "@keyword", },
+		['@keyword.import'] = { link = "@keyword", },
+		['@keyword.storage'] = { link = "@keyword", },
+		['@keyword.repeat'] = { link = "@keyword", },
+		['@keyword.return'] = { link = "@keyword", },
+		['@keyword.debug'] = { link = "@keyword", },
+		['@keyword.exception'] = { link = "@keyword", },
+
+		['@keyword.conditional'] = { link = "@keyword", },
+		['@keyword.conditional.ternary'] = { link = "@keyword", italic = true },
+
+		['@keyword.directive'] = { link = "@keyword", italic = true },
+		['@keyword.directive.define'] = { link = "@keyword", italic = true },
+
+		['@comment'] = { fg = colors.fg_alt, bg = colors.bg_alt, italic = true, },
+		['@comment.documentation'] = { link = "@comment", },
+
+		['@comment.error'] = { link = "@comment", fg = colors.red, },
+		['@comment.warning'] = { link = "@comment", fg = colors.yellow, },
+		['@comment.todo'] = { link = "@comment", fg = colors.cyan, },
+		['@comment.note'] = { link = "@comment", fg = colors.cyan_alt, },
+
+		['@markup.strong'] = { bold = true, },
+		['@markup.italic'] = { italic = true, },
+		['@markup.strikethrough'] = { strikethrough = true, },
+		['@markup.underline'] = { underline = true, },
+
+		['@markup.heading'] = { fg = colors.purple, bold = true, undeline = true, },
+
+		['@markup.quote'] = { fg = colors.yellow, bg = colors.bg_alt, italic = true, },
+		['@markup.math'] = { fg = colors.yellow_alt, bg = colors.bg_alt, },
+		['@markup.environment'] = { fg = colors.yellow, bg = colors.bg_alt, },
+
+		['@markup.link'] = { fg = colors.cyan, italic = true, undercurl = true, },
+		['@markup.link.label'] = { link = "@markup.link", },
+		['@markup.link.url'] = { link = "@markup.link", },
+
+		['@markup.raw'] = { fg = colors.orange, bg = colors.bg_alt, italic = true, },
+		['@markup.raw.block'] = { link = "@markup.raw", },
+
+		['@markup.list'] = { fg = colors.cyan, bold = true, },
+		['@markup.list.checked'] = { fg = colors.fg_alt, },
+		['@markup.list.unchecked'] = { fg = colors.cyan, bold = true, },
+
+		['@diff.plus'] = { fg = colors.green, },
+		['@diff.minus'] = { fg = colors.red, },
+		['@diff.delta'] = { fg = colors.yellow, },
 
 		['@tag'] = { fg = colors.blue, },
 		['@tag.attribute'] = { fg = colors.green, },
 		['@tag.delimiter'] = { fg = colors.blue_alt, },
-
-		-- Semantic
-		['@class'] = { fg = colors.yellow },
-		['@struct'] = { fg = colors.yellow },
-		['@enum'] = { fg = colors.yellow },
-		['@enumMember'] = { fg = colors.orange },
-		['@event'] = { fg = colors.green },
-		['@interface'] = { fg = colors.yellow },
-		['@modifier'] = { fg = colors.yellow },
-		['@regexp'] = { fg = colors.green },
-		['@typeParameter'] = { fg = colors.pink },
-		['@decorator'] = { fg = colors.yellow_alt },
 
 		-- HTML
 		htmlArg = { fg = colors.green, },
