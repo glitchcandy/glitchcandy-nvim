@@ -264,11 +264,11 @@ local function setup()
 		markdownCodeBlock = { fg = colors.green, },
 		markdownCodeDelimiter = { fg = colors.red, },
 		markdownH1 = { fg = colors.purple, bold = true, },
-		markdownH2 = { link = "markdownH1" },
-		markdownH3 = { link = "markdownH1" },
-		markdownH4 = { link = "markdownH1" },
-		markdownH5 = { link = "markdownH1" },
-		markdownH6 = { link = "markdownH1" },
+		markdownH2 = { fg = colors.purple, bold = true, },
+		markdownH3 = { fg = colors.purple, bold = true, },
+		markdownH4 = { fg = colors.purple, bold = true, },
+		markdownH5 = { fg = colors.purple, bold = true, },
+		markdownH6 = { fg = colors.purple, bold = true, },
 		markdownHeadingDelimiter = { fg = colors.red, },
 		markdownHeadingRule = { fg = colors.fg_alt, },
 		markdownId = { fg = colors.purple, },
@@ -365,15 +365,6 @@ local function setup()
 		CmpItemKindConstant = { link = "@constant" },
 		CmpItemKindStruct = { link = "@type" },
 		CmpItemKindTypeParameter = { link = "@variable.parameter" },
-
-		TSTitle = { link = "markdownH1", },
-		TSLiteral = { link = "markdownBlockquote", },
-		TSEmphasis = { link = "markdownItalic", },
-		TSStrong = { link = "markdownBold", },
-		TSURI = { link = "markdownLinkText", },
-		TSTextReference = { link = "markdownId", },
-		TSPuncSpecial = { link = "markdownRule", },
-		TSStringEscape = { link = "markdownRule", },
 	}
 end
 
