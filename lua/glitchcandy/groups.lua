@@ -365,6 +365,15 @@ local function setup()
 		CmpItemKindConstant = { link = "@constant" },
 		CmpItemKindStruct = { link = "@type" },
 		CmpItemKindTypeParameter = { link = "@variable.parameter" },
+
+		TSTitle = { link = "markdownH1", },
+		TSLiteral = { link = "markdownBlockquote", },
+		TSEmphasis = { link = "markdownItalic", },
+		TSStrong = { link = "markdownBold", },
+		TSURI = { link = "markdownLinkText", },
+		TSTextReference = { link = "markdownId", },
+		TSPuncSpecial = { link = "markdownRule", },
+		TSStringEscape = { link = "markdownRule", },
 	}
 end
 
