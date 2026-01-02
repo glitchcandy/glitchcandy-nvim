@@ -135,16 +135,16 @@ local function setup()
 		['@module.builtin'] = { fg = colors.yellow_alt, },
 		['@label'] = { fg = colors.yellow_alt, },
 
-		['@string'] = { fg = colors.green, },
-		['@string.documentation'] = { fg = colors.green_alt, },
+		['@string'] = { fg = colors.orange, },
+		['@string.documentation'] = { fg = colors.orange_alt, bold = true },
 		['@string.regex'] = { fg = colors.red, },
-		['@string.escape'] = { fg = colors.green_alt, },
+		['@string.escape'] = { fg = colors.orange_alt, },
 		['@string.special'] = { link = "@string.escape", },
 		['@string.symbol'] = { link = "@string.escape", },
 		['@string.path'] = { fg = colors.cyan, },
 		['@string.url'] = { fg = colors.cyan, undercurl = true, },
 
-		['@character'] = { fg = colors.green_alt, },
+		['@character'] = { fg = colors.orange_alt, },
 		['@character.special'] = { link = "@character", bold = true, },
 
 		['@boolean'] = { fg = colors.blue, },
@@ -187,9 +187,9 @@ local function setup()
 		['@keyword.directive'] = { link = "@keyword", italic = true },
 		['@keyword.directive.define'] = { link = "@keyword", italic = true },
 
-		['@punctuation.delimiter'] = { fg = colors.orange, },
+		['@punctuation.delimiter'] = { fg = colors.orange, bold = true },
 		['@punctuation.bracket'] = { link = "@punctuation.delimiter" },
-		['@punctuation.special'] = { link = "@punctuation.special", },
+		['@punctuation.special'] = { link = "@punctuation.bracket", },
 
 		['@comment'] = { fg = colors.fg_alt, bg = colors.bg_alt, italic = true, },
 		['@comment.documentation'] = { link = "@comment", },
