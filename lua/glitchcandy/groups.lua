@@ -187,7 +187,7 @@ local function setup()
 		['@keyword.directive'] = { link = "@keyword", italic = true },
 		['@keyword.directive.define'] = { link = "@keyword", italic = true },
 
-		['@punctuation.delimiter'] = { fg = colors.orange, bold = true },
+		['@punctuation.delimiter'] = { fg = colors.green_alt, bold = true },
 		['@punctuation.bracket'] = { link = "@punctuation.delimiter" },
 		['@punctuation.special'] = { link = "@punctuation.bracket", },
 
