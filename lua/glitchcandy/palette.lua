@@ -1,7 +1,7 @@
 ---@class Palette
 return {
-	bg = "#15131a",
-	bg_alt = "#282430",
+	bg_alt = "#15131a",
+	bg = "#282430",
 	fg = "#fffced",
 	fg_alt = "#7f7399",
 	red = "#ff2c28",

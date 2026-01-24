@@ -69,7 +69,7 @@ local function setup()
 		Cursor = { reverse = true, },
 		CursorLineNr = { fg = colors.fg, bold = true, },
 
-		SignColumn = { bg = colors.bg, },
+		SignColumn = { bg = colors.bg_alt, },
 
 		Conceal = { fg = colors.fg_alt, },
 		CursorColumn = { bg = colors.bg_alt, },
@@ -93,7 +93,7 @@ local function setup()
 		FoldColumn = {},
 		Search = { fg = colors.bg_alt, bg = colors.orange, },
 		IncSearch = { fg = colors.fg, bg = colors.orange, },
-		LineNr = { fg = colors.fg_alt, },
+		LineNr = { fg = colors.fg_alt, bg = colors.bg_alt },
 		MatchParen = { fg = colors.fg, underline = true, },
 		NonText = { fg = colors.bg_alt, },
 		Pmenu = { fg = colors.fg, bg = colors.bg_alt, },
@@ -119,7 +119,7 @@ local function setup()
 		WarningMsg = { fg = colors.yellow, },
 		WildMenu = { fg = colors.bg, bg = colors.fg, },
 
-		EndOfBuffer = { fg = colors.bg },
+		EndOfBuffer = { fg = colors.bg_alt, bg = colors.bg_alt },
 
 		-- TreeSitter
 		['@variable'] = { fg = colors.purple, },
